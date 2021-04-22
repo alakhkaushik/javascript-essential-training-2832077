@@ -9,7 +9,7 @@
 
 const backpack = {
   name: "Everyday Backpack",
-  volume: 30,
+  volumes: [30, "text", 50],
   color: "grey",
   pocketNum: 15,
   strapLength: {
@@ -23,4 +23,14 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  newVolumes(volumeArray) {
+    this.volumes = volumeArray;
+  },
 };
+
+console.log("volumes:", backpack["volumes"]);
+backpack.newVolumes([
+  [60, "doubled", 100],
+  [120, "doubled", 200],
+]);
+console.log("volumes:", backpack["volumes"]);

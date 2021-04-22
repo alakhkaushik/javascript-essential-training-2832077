@@ -4,9 +4,9 @@
 
 const backpack = {
   name: "Everyday Backpack",
-  volume: 30,
+  volumes: [30, 40, 50],
   color: "grey",
-  pocketNum: 15,
+  "pocket-Num": 15,
   strapLength: {
     left: 26,
     right: 26,
@@ -22,7 +22,7 @@ const backpack = {
 };
 
 console.log("The backpack object:", backpack);
-console.log("The pocketNum value:", backpack.pocketNum);
+console.log("The pocket-Num value:", backpack["pocket-Num"]);
 
 console.log("Left before:", backpack.strapLength.left);
 
