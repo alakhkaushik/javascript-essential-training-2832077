@@ -1,3 +1,4 @@
+import Book from "./Book.js";
 class Backpack {
   constructor(
     name,
@@ -7,7 +8,8 @@ class Backpack {
     strapLengthL,
     strapLengthR,
     lidOpen,
-    dateAcquired
+    dateAcquired,
+    books
   ) {
     this.name = name;
     this.volume = volume;
@@ -19,6 +21,7 @@ class Backpack {
     };
     this.lidOpen = lidOpen;
     this.dateAcquired = dateAcquired;
+    this.books = [];
   }
   toggleLid(lidStatus) {
     this.lidOpen = lidStatus;
@@ -33,6 +36,14 @@ class Backpack {
     let elapsed = now - acquired; // elapsed time in milliseconds
     let daysSinceAcquired = Math.floor(elapsed / (1000 * 3600 * 24));
     return daysSinceAcquired;
+  }
+  showBackpackBooks() {
+    this.books.forEach((book) => {
+      console.log(book);
+    });
+  }
+  putBook(book) {
+    this.books.push(book);
   }
 }
 
