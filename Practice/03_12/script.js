@@ -8,22 +8,7 @@
  */
 
 import Backpack from "./Backpack.js";
-
-class Person {
-  constructor(firstName, lastName, email, sex) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
-    this.sex = sex;
-  }
-
-  SignUp() {
-    console.log(this["firstName"], " SignedUp");
-  }
-  SignIn() {
-    console.log(this["firstName"], " SignedIn");
-  }
-}
+import Person from "./Person.js";
 
 const user = new Person("Alakh", "Bhatt", "alakhkaushik@gmail.com", "male");
 console.log(user);
