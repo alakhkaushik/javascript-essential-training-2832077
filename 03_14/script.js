@@ -53,3 +53,16 @@ console.log(
   everydayPack.books.length
 );
 everydayPack.showBackpackBooks();
+
+console.log(
+  "putting this book in everydayPack:",
+  'const book = new Book(1, "one", "ABC", "XYZ Company", new Date(), "mystery");'
+);
+book = new Book(1, "two", "PQR", "ASD Company", new Date(), "mystery");
+everydayPack.putBook(book);
+
+console.log(
+  "Current books inside the everydayPack:",
+  everydayPack.books.length
+);
+everydayPack.showBackpackBooks();
