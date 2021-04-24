@@ -15,6 +15,9 @@ const stuffItems = stuff.map((item) => {
   return listItem;
 });
 
+console.log("stuff:", stuff);
+console.log("stuffItems:", stuffItems);
+
 // Append each element from the stuffItems array to the stuffList <ul>
 stuffItems.forEach((item) => {
   stuffList.append(item);
